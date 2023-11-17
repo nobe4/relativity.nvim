@@ -12,6 +12,20 @@ function M.mark(name)
 	}
 end
 
+function M.location_names()
+	local names = {}
+	local n = 0
+
+	for k, _ in pairs(M.locations) do
+		vim.print(k)
+		n = n + 1
+		names[n] = k
+	end
+
+	vim.print(names)
+	return table.sort(names)
+end
+
 function M.list()
 	vim.print(M.locations)
 end
