@@ -10,3 +10,4 @@ Set a mark anywhere, at any time and travel back to it easily.
 - Support auto-naming marks
 - Look at `: mark-motions` and follow similar guidelines/auto-marks
 - Add support for "last mark"
+- Add autocompletion support for `:RLTravel`
