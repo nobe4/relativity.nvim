@@ -12,8 +12,10 @@ function M.mark(name)
 	}
 end
 
-function M.list()
-	vim.print(M.locations)
+function M.location_names()
+	local keys = vim.tbl_keys(M.locations)
+  table.sort(keys)
+	return keys
 end
 
 function M.travel(name)
@@ -23,7 +25,7 @@ function M.travel(name)
 		return
 	end
 
-	vim.cmd.edit({ location.where.file, bang = true })
+	vim.cmd.edit({ args = { location.where.file }, bang = true })
 	vim.cmd("undo " .. location.when)
 	vim.api.nvim_win_set_cursor(0, location.where.cursor)
 end
