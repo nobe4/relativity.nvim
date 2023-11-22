@@ -18,7 +18,6 @@ end, {
 	end,
 })
 
-vim.api.nvim_create_user_command("RLList", relativity.list, {})
-vim.api.nvim_create_user_command("RLTest", function()
+vim.api.nvim_create_user_command("RLList", function()
 	vim.print(relativity.location_names())
 end, {})
